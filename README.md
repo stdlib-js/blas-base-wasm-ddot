@@ -35,38 +35,32 @@ limitations under the License.
 
 > Compute the dot product of `x` and `y`.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-base-wasm-ddot
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-ddot = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-ddot-wasm@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var ddot = require( 'path/to/vendor/umd/blas-base-ddot-wasm/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-ddot-wasm@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.ddot;
-})();
-</script>
+var ddot = require( '@stdlib/blas-base-wasm-ddot' );
 ```
 
 #### ddot.main( N, x, strideX, y, strideY )
@@ -311,14 +305,9 @@ The function has the following additional parameters:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-ddot-wasm@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var ddot = require( '@stdlib/blas-base-wasm-ddot' );
 
 var opts = {
     'dtype': 'float64'
@@ -331,11 +320,6 @@ console.log( y );
 
 var z = ddot.ndarray( x.length, x, 1, 0, y, -1, y.length-1 );
 console.log( z );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -376,7 +360,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -386,19 +370,19 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/blas-base-ddot-wasm.svg
-[npm-url]: https://npmjs.org/package/@stdlib/blas-base-ddot-wasm
+[npm-image]: http://img.shields.io/npm/v/@stdlib/blas-base-wasm-ddot.svg
+[npm-url]: https://npmjs.org/package/@stdlib/blas-base-wasm-ddot
 
-[test-image]: https://github.com/stdlib-js/blas-base-ddot-wasm/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/blas-base-ddot-wasm/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/blas-base-wasm-ddot/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/blas-base-wasm-ddot/actions/workflows/test.yml?query=branch:main
 
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/blas-base-ddot-wasm/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/blas-base-ddot-wasm?branch=main
+[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/blas-base-wasm-ddot/main.svg
+[coverage-url]: https://codecov.io/github/stdlib-js/blas-base-wasm-ddot?branch=main
 
 <!--
 
-[dependencies-image]: https://img.shields.io/david/stdlib-js/blas-base-ddot-wasm.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/blas-base-ddot-wasm/main
+[dependencies-image]: https://img.shields.io/david/stdlib-js/blas-base-wasm-ddot.svg
+[dependencies-url]: https://david-dm.org/stdlib-js/blas-base-wasm-ddot/main
 
 -->
 
@@ -412,15 +396,15 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [umd]: https://github.com/umdjs/umd
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
-[deno-url]: https://github.com/stdlib-js/blas-base-ddot-wasm/tree/deno
-[deno-readme]: https://github.com/stdlib-js/blas-base-ddot-wasm/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/blas-base-ddot-wasm/tree/umd
-[umd-readme]: https://github.com/stdlib-js/blas-base-ddot-wasm/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/blas-base-ddot-wasm/tree/esm
-[esm-readme]: https://github.com/stdlib-js/blas-base-ddot-wasm/blob/esm/README.md
-[branches-url]: https://github.com/stdlib-js/blas-base-ddot-wasm/blob/main/branches.md
+[deno-url]: https://github.com/stdlib-js/blas-base-wasm-ddot/tree/deno
+[deno-readme]: https://github.com/stdlib-js/blas-base-wasm-ddot/blob/deno/README.md
+[umd-url]: https://github.com/stdlib-js/blas-base-wasm-ddot/tree/umd
+[umd-readme]: https://github.com/stdlib-js/blas-base-wasm-ddot/blob/umd/README.md
+[esm-url]: https://github.com/stdlib-js/blas-base-wasm-ddot/tree/esm
+[esm-readme]: https://github.com/stdlib-js/blas-base-wasm-ddot/blob/esm/README.md
+[branches-url]: https://github.com/stdlib-js/blas-base-wasm-ddot/blob/main/branches.md
 
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/blas-base-ddot-wasm/main/LICENSE
+[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/blas-base-wasm-ddot/main/LICENSE
 
 [blas]: http://www.netlib.org/blas
 
@@ -428,13 +412,13 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64/tree/umd
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
 
-[@stdlib/wasm/memory]: https://github.com/stdlib-js/wasm-memory/tree/umd
+[@stdlib/wasm/memory]: https://github.com/stdlib-js/wasm-memory
 
-[@stdlib/wasm/module-wrapper]: https://github.com/stdlib-js/wasm-module-wrapper/tree/umd
+[@stdlib/wasm/module-wrapper]: https://github.com/stdlib-js/wasm-module-wrapper
 
-[@stdlib/blas/base/ddot]: https://github.com/stdlib-js/blas-base-ddot/tree/umd
+[@stdlib/blas/base/ddot]: https://github.com/stdlib-js/blas-base-ddot
 
 </section>
 
