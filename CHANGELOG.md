@@ -2,6 +2,40 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2026-02-27)
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`680d163`](https://github.com/stdlib-js/stdlib/commit/680d163820a00a331e89bcd9aabc5fcd3cc8d2c4) - **bench:** refactor to use string interpolation in `blas/base/wasm/ddot` [(#10507)](https://github.com/stdlib-js/stdlib/pull/10507) _(by Shubham)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 1 person contributed to this release. Thank you to this contributor:
+
+-   Shubham
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.1.1">
 
 ## 0.1.1 (2026-02-08)
